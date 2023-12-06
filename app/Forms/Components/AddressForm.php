@@ -47,6 +47,7 @@ class AddressForm extends Forms\Components\Field
                         ->getOptionLabelUsing(fn ($value): ?string => Country::find($value)?->getAttribute('name')),
                 ]),
             Forms\Components\TextInput::make('street')
+                ->autofocus()
                 ->label('Street address')
                 ->maxLength(255),
             Forms\Components\Grid::make(3)
